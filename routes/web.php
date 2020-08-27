@@ -1,4 +1,7 @@
-<?php
+<?php declare(strict_types=1);
+
+use App\Http\Controllers\FilmController;
+use Laravel\Lumen\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,6 +14,15 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$router->get('/films', function () use ($router) {
+    /** @var FilmController $controller */
+    $controller = $router->app->make(FilmController::class);
+    $request = $router->app->make(Request::class);
+    return $controller->getFilms($request);
+});
+
+$router->get('/films/{id:[0-9]+}', function (int $id) use ($router) {
+    /** @var FilmController $controller */
+    $controller = $router->app->make(FilmController::class);
+    return $controller->getFilm($id);
 });
