@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "78e8239d-4626-41b2-9640-9c7adef58a8d",
+		"name": "films",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/films/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/films/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"films",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/films",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/films",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"films"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

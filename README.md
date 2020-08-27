@@ -14,6 +14,7 @@
 #### public -> index.php front controller of the app
 #### routes -> public and api routes(need authentication)
 #### tests -> perform integration tests for app
+#### rest-api-doc -> postman collection
 
 #### This is a MVC project structure
 
